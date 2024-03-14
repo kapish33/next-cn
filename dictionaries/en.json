@@ -1,17 +1,16 @@
 {
-    "navigation": {
-      "home": "Home",
-      "about": "About"
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "page": {
+    "home": {
+      "title": "Art Of Living Programs",
+      "description": "Operating in 180 countries, Art of Living, founded in 1981 by Gurudev Sri Sri Ravi Shankar, offers programs guided by his philosophy. Join us in creating a world of peace and well-being!"
     },
-    "page": {
-      "home": {
-        "title": "Welcome to NextJs i18n",
-        "description": "Internationalization in NextJs 13 App router"
-      },
-      "about": {
-        "title": "About Us",
-        "description": "This is the about page"
-      }
+    "about": {
+      "title": "About Us",
+      "description": "This is the about page"
     }
   }
-  
+}
