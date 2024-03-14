@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Headers from "@/components/common/Header/headers";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Inter as FontSans } from "next/font/google";
@@ -37,6 +38,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <Headers />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

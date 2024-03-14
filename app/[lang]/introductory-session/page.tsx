@@ -1,4 +1,4 @@
-import Hero from "@/components/custum/hero";
+import { ProfileForm } from "@/components/custum/UserForm";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 
@@ -10,8 +10,8 @@ export default async function Home({
   const { page } = await getDictionary(lang);
 
   return (
-    <section>
-      <Hero title={page.home.title} description={page.home.description} />
-    </section>
+    <div className="max-w-3xl mx-auto">
+      <ProfileForm />
+    </div>
   );
 }
