@@ -11,6 +11,38 @@
     "about": {
       "title": "About Us",
       "description": "This is the about page"
+    },
+    "form": {
+      "name": {
+        "fieldName": "name",
+        "filedLabel": "Your Name",
+        "placeHolder": "Your Name",
+        "filedDescription": "Please Fill Your Name"
+      },
+      "whatsappNumber": {
+        "fieldName": "whatsappNumber",
+        "filedLabel": "WhatsApp Number",
+        "placeHolder": "12345 12345",
+        "filedDescription": "Please provide your WhatsApp number."
+      },
+      "area": {
+        "fieldName": "area",
+        "filedLabel": "Area",
+        "placeHolder": "Select an area",
+        "filedDescription": "Choose your area from the options provided."
+      },
+      "sudarshanKriya": {
+        "fieldName": "sudarshanKriya",
+        "filedLabel": "Have you learnt Sudarshan Kriya?",
+        "placeHolder": "",
+        "filedDescription": ""
+      },
+      "sahajSamadhi": {
+        "fieldName": "sahajSamadhi",
+        "filedLabel": "Have you done Sahaj Samadhi Meditation program?",
+        "placeHolder": "",
+        "filedDescription": ""
+      }
     }
   }
 }

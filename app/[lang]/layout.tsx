@@ -6,13 +6,12 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/common/Theme/theme-provider";
 import { Locale, i18n } from "@/i18n.config";
+import { Toaster } from "@/components/ui/sonner";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
-
-const inter = Inter({ subsets: ["latin"] });
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -38,14 +37,15 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Headers />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Headers />
           {children}
+          <Toaster position="top-center" />
         </ThemeProvider>
       </body>
     </html>

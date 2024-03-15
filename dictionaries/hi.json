@@ -1,17 +1,48 @@
 {
-    "navigation": {
-      "home": "Startseite",
-      "about": "Über"
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über"
+  },
+  "page": {
+    "home": {
+      "title": "आर्ट ऑफ़ लिविंग प्रोग्राम्स",
+      "description": "180 देशों में कार्यरत, आर्ट ऑफ़ लिविंग 1981 में गुरुदेव श्री श्री रवि शंकर द्वारा स्थापित वैश्विक आंदोलन है। हमारे प्रोग्राम गुरुदेव के दर्शनिकी पर आधारित हैं और हम शांति और सुख की दुनिया में शामिल होने के लिए आपको आमंत्रित करते हैं!"
     },
-    "page": {
-      "home": {
-        "title": "आर्ट ऑफ़ लिविंग प्रोग्राम्स",
-        "description": "180 देशों में कार्यरत, आर्ट ऑफ़ लिविंग 1981 में गुरुदेव श्री श्री रवि शंकर द्वारा स्थापित वैश्विक आंदोलन है। हमारे प्रोग्राम गुरुदेव के दर्शनिकी पर आधारित हैं और हम शांति और सुख की दुनिया में शामिल होने के लिए आपको आमंत्रित करते हैं!"
+    "about": {
+      "title": "Über uns",
+      "description": "Dies ist die About-Seite"
+    },
+    "form": {
+      "name": {
+        "fieldName": "name",
+        "filedLabel": "आपका नाम",
+        "placeHolder": "आपका नाम",
+        "filedDescription": "कृपया अपना नाम भरें"
       },
-      "about": {
-        "title": "Über uns",
-        "description": "Dies ist die About-Seite"
+      "whatsappNumber": {
+        "fieldName": "whatsappNumber",
+        "filedLabel": "व्हाट्सएप नंबर",
+        "placeHolder": "12345 12345",
+        "filedDescription": "कृपया अपना व्हाट्सएप नंबर दें।"
+      },
+      "area": {
+        "fieldName": "area",
+        "filedLabel": "क्षेत्र",
+        "placeHolder": "क्षेत्र का चयन करें",
+        "filedDescription": "प्रदान किए गए विकल्पों में से अपने क्षेत्र का चयन करें।"
+      },
+      "sudarshanKriya": {
+        "fieldName": "sudarshanKriya",
+        "filedLabel": "क्या आपने सुदर्शन क्रिया सीखी है?",
+        "placeHolder": "",
+        "filedDescription": ""
+      },
+      "sahajSamadhi": {
+        "fieldName": "sahajSamadhi",
+        "filedLabel": "क्या आपने सहज समाधि ध्यान कार्यक्रम किया है?",
+        "placeHolder": "",
+        "filedDescription": ""
       }
     }
   }
-  
+}

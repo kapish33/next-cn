@@ -12,6 +12,38 @@
     "about": {
       "title": "Über uns",
       "description": "Dies ist die About-Seite"
+    },
+    "form": {
+      "name": {
+        "fieldName": "name",
+        "filedLabel": "તમારું નામ",
+        "placeHolder": "તમારું નામ",
+        "filedDescription": "કૃપા કરીને તમારું નામ ભરો."
+      },
+      "whatsappNumber": {
+        "fieldName": "whatsappNumber",
+        "filedLabel": "વોટ્સએપ નંબર",
+        "placeHolder": "12345 12345",
+        "filedDescription": "કૃપા કરીને તમારું વોટ્સએપ નંબર આપો."
+      },
+      "area": {
+        "fieldName": "area",
+        "filedLabel": "એરિયા",
+        "placeHolder": "એરિયા પસંદ કરો",
+        "filedDescription": "પ્રદાન કરેલા વિકલ્પોમાંથી તમારો એરિયા પસંદ કરો."
+      },
+      "sudarshanKriya": {
+        "fieldName": "sudarshanKriya",
+        "filedLabel": "શુદર્શન ક્રિયા શિખ્યો છો?",
+        "placeHolder": "",
+        "filedDescription": ""
+      },
+      "sahajSamadhi": {
+        "fieldName": "sahajSamadhi",
+        "filedLabel": "શહજ સમાધિ મેડિટેશન પ્રોગ્રામ કર્યું છું?",
+        "placeHolder": "",
+        "filedDescription": ""
+      }
     }
   }
 }

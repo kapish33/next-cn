@@ -1,13 +1,14 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 
 import {
   userForm as formSchema,
   userFormInterface,
-  defaultValues,
   selectableOptions,
+  ProfileFormProps,
 } from "@/schema";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,20 +31,24 @@ import {
 import { CITY } from "@/lib/city";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
-export function ProfileForm() {
+export function ProfileForm({ formData }: ProfileFormProps) {
   const form = useForm<userFormInterface>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
       whatsappNumber: "",
-      area: "Abhava",
-      sudarshanKriya: "no",
-      sahajSamadhi: "no",
     },
   });
 
   function onSubmit(values: userFormInterface) {
     console.log(values);
+    toast("Event has been created", {
+      description: "Sunday, December 03, 2023 at 9:00 AM",
+      action: {
+        label: "Undo",
+        onClick: () => console.log("Undo"),
+      },
+    });
   }
 
   return (
@@ -51,15 +56,15 @@ export function ProfileForm() {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           control={form.control}
-          name="username"
+          name={formData.name.fieldName}
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
+            <FormItem className="space-y-3">
+              <FormLabel>{formData.name.filedLabel}</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder={formData.name.placeHolder} {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                {formData.name.filedDescription}
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -67,15 +72,15 @@ export function ProfileForm() {
         />
         <FormField
           control={form.control}
-          name="whatsappNumber"
+          name={formData.whatsappNumber.fieldName}
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>WhatsApp Number</FormLabel>
+            <FormItem className="space-y-3">
+              <FormLabel>{formData.whatsappNumber.filedLabel}</FormLabel>
               <FormControl>
-                <Input placeholder="1234567890" {...field} />
+                <Input maxLength={10} placeholder={formData.whatsappNumber.placeHolder} {...field} />
               </FormControl>
               <FormDescription>
-                Please provide your WhatsApp number.
+                {formData.whatsappNumber.filedDescription}.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -84,14 +89,14 @@ export function ProfileForm() {
 
         <FormField
           control={form.control}
-          name="area"
+          name={formData.area.fieldName}
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Area</FormLabel>
+            <FormItem className="space-y-3">
+              <FormLabel>{formData.area.filedLabel}</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select an area" />
+                    <SelectValue placeholder={formData.area.placeHolder} />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
@@ -103,7 +108,7 @@ export function ProfileForm() {
                 </SelectContent>
               </Select>
               <FormDescription>
-                Choose your area from the options provided.
+                {formData.area.filedDescription}
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -111,10 +116,10 @@ export function ProfileForm() {
         />
         <FormField
           control={form.control}
-          name="sudarshanKriya"
+          name={formData.sudarshanKriya.fieldName}
           render={({ field }) => (
-            <FormItem className="space-y-3">
-              <FormLabel>Have you learnt Sudarshan Kriya?</FormLabel>
+            <FormItem className="space-y-3 py-4">
+              <FormLabel>{formData.sudarshanKriya.filedLabel}</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -140,12 +145,10 @@ export function ProfileForm() {
         />
         <FormField
           control={form.control}
-          name="sahajSamadhi"
+          name={formData.sahajSamadhi.fieldName}
           render={({ field }) => (
-            <FormItem className="space-y-3">
-              <FormLabel>
-                Have you done Sahaj Samadhi Meditation program?
-              </FormLabel>
+            <FormItem className="space-y-3 py-4">
+              <FormLabel>{formData.sahajSamadhi.filedLabel}</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -170,7 +173,9 @@ export function ProfileForm() {
           )}
         />
 
-        <Button type="submit">Submit</Button>
+        <Button className="md:w-1/3 w-full" type="submit">
+          Submit
+        </Button>
       </form>
     </Form>
   );

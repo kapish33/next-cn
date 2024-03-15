@@ -1,7 +1,7 @@
 import { CITY } from "@/lib/city";
 import { z } from "zod";
 
-export const selectableOptions = ["yes", "no"] as const;
+export const selectableOptions = ["Yes", "No"] as const;
 
 export const userForm = z.object({
   username: z.string().min(2, {
@@ -17,10 +17,39 @@ export const userForm = z.object({
 
 export type userFormInterface = z.infer<typeof userForm>;
 
-export const defaultValues = {
-  username: "",
-  whatsappNumber: "",
-  area: "Abhava",
-  sudarshanKriya: "no",
-  sahajSamadhi: "no",
+type UserFormField = keyof userFormInterface;
+
+export type ProfileFormProps = {
+  formData: {
+    name: {
+      fieldName: UserFormField;
+      filedLabel: string;
+      placeHolder: string;
+      filedDescription: string;
+    };
+    whatsappNumber: {
+      fieldName: UserFormField;
+      filedLabel: string;
+      placeHolder: string;
+      filedDescription: string;
+    };
+    area: {
+      fieldName: UserFormField;
+      filedLabel: string;
+      placeHolder: string;
+      filedDescription: string;
+    };
+    sudarshanKriya: {
+      fieldName: UserFormField;
+      filedLabel: string;
+      placeHolder: string;
+      filedDescription: string;
+    };
+    sahajSamadhi: {
+      fieldName: UserFormField;
+      filedLabel: string;
+      placeHolder: string;
+      filedDescription: string;
+    };
+  };
 };
