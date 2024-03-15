@@ -14,7 +14,7 @@
     },
     "form": {
       "name": {
-        "fieldName": "name",
+        "fieldName": "username",
         "filedLabel": "Your Name",
         "placeHolder": "Your Name",
         "filedDescription": "Please Fill Your Name"

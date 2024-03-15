@@ -15,7 +15,7 @@
     },
     "form": {
       "name": {
-        "fieldName": "name",
+        "fieldName": "username",
         "filedLabel": "તમારું નામ",
         "placeHolder": "તમારું નામ",
         "filedDescription": "કૃપા કરીને તમારું નામ ભરો."
