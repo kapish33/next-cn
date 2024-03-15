@@ -42,7 +42,14 @@
         "filedLabel": "क्या आपने सहज समाधि ध्यान कार्यक्रम किया है?",
         "placeHolder": "",
         "filedDescription": ""
+      },
+      "volunteer": {
+        "fieldName": "volunteer",
+        "fieldLabel": "क्या आप हमें स्वयंसेवक बनकर सहायता करना चाहेंगे?",
+        "placeHolder": "",
+        "fieldDescription": ""
       }
+      
     }
   }
 }

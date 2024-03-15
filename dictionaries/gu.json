@@ -43,7 +43,14 @@
         "filedLabel": "શહજ સમાધિ મેડિટેશન પ્રોગ્રામ કર્યું છું?",
         "placeHolder": "",
         "filedDescription": ""
+      },
+      "volunteer": {
+        "fieldName": "volunteer",
+        "fieldLabel": "શું તમે અમારા સાથે સ્વયંસેવક બની સહાય કરવા ઇચ્છો છો?",
+        "placeHolder": "",
+        "fieldDescription": ""
       }
+      
     }
   }
 }

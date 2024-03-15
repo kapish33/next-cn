@@ -42,6 +42,12 @@
         "filedLabel": "Have you done Sahaj Samadhi Meditation program?",
         "placeHolder": "",
         "filedDescription": ""
+      },
+      "volunteer": {
+        "fieldName": "volunteer",
+        "filedLabel": "Would You Love To Volunter With Us?",
+        "placeHolder": "",
+        "filedDescription": ""
       }
     }
   }

@@ -173,6 +173,34 @@ export function ProfileForm({ formData }: ProfileFormProps) {
           )}
         />
 
+<FormField
+          control={form.control}
+          name={formData.volunteer.fieldName}
+          render={({ field }) => (
+            <FormItem className='space-y-3 py-4'>
+              <FormLabel>{formData.volunteer.filedLabel}</FormLabel>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className='flex flex-col space-y-1'>
+                  {selectableOptions.map((option) => (
+                    <FormItem
+                      key={option}
+                      className='flex items-center space-x-3 space-y-0'>
+                      <FormControl>
+                        <RadioGroupItem value={option} />
+                      </FormControl>
+                      <FormLabel className='font-normal'>{option}</FormLabel>
+                    </FormItem>
+                  ))}
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <Button className='md:w-1/3 w-full' type='submit'>
           Submit
         </Button>
