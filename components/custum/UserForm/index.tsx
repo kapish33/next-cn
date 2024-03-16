@@ -30,6 +30,7 @@ import {
 } from '@/components/ui/select';
 import { CITY } from '@/lib/city';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import crudOperations from '@/firebase/RealTime-Database/crud';
 
 export function ProfileForm({ formData }: ProfileFormProps) {
   const form = useForm<userFormInterface>({
@@ -40,15 +41,29 @@ export function ProfileForm({ formData }: ProfileFormProps) {
     },
   });
 
-  function onSubmit(values: userFormInterface) {
+  async function onSubmit(values: userFormInterface) {
     console.log(values);
-    toast('Event has been created', {
-      description: 'Sunday, December 03, 2023 at 9:00 AM',
-      action: {
-        label: 'Undo',
-        onClick: () => console.log('Undo'),
-      },
-    });
+    try {
+  
+      // Call the `crudOperations` function to create a new document
+      await crudOperations("POST", "user", values);
+  
+      // Show a success message to the user
+      toast('Event has been created', {
+        description: 'Sunday, December 03, 2023 at 9:00 AM',
+        action: {
+          label: 'Undo',
+          onClick: () => console.log('Undo'),
+        },
+      });
+    } catch (error) {
+      // Handle any errors that occur during the CRUD operation
+      console.error('Error creating event:', error);
+      // Optionally, show an error message to the user
+      toast('Failed to create event. Please try again later.', {
+        description: 'Some Error Message',
+      });
+    }
   }
 
   return (
