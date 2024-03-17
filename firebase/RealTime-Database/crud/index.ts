@@ -1,3 +1,5 @@
+'use server'
+
 import { db } from '@/firebase/config';
 import {
   addDoc,

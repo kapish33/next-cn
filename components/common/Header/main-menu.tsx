@@ -12,6 +12,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { SunIcon } from '@radix-ui/react-icons';
 
@@ -66,7 +67,7 @@ export function MainNavigationMenu() {
                   <a
                     className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
                     href='/'>
-                    <SunIcon className="h-6 w-6" />
+                    <SunIcon className='h-6 w-6' />
                     <div className='mb-2 mt-4 text-lg font-medium'>
                       shadcn/ui
                     </div>
@@ -83,9 +84,11 @@ export function MainNavigationMenu() {
               <ListItem href='/docs/installation' title='Installation'>
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href='/docs/primitives/typography' title='Typography'>
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
+              <Link href='/introductory-session'>
+                <ListItem title='Introductory Session'>
+                  Discover peace and empowerment in our transformative 60-minute
+                </ListItem>
+              </Link>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
