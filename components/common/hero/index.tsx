@@ -25,7 +25,7 @@ const HeroCources: React.FC<Hero> = ({ title, cources }) => {
             <div className='lg:max-w-lg'>
               <div className='mt-8 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1'>
                 {cources.map((service) => (
-                  <HeroCard {...service} />
+                  <HeroCard key={service.heading} {...service} />
                 ))}
               </div>
             </div>
