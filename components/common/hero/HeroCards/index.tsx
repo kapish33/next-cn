@@ -34,7 +34,7 @@ export const HeroCard: React.FC<cource> = ({ heading, online }) => {
         </div>
 
         <Link className='my-auto' href={'/'}>
-          <Button>Regester</Button>
+          <Button size='sm'>Regester</Button>
         </Link>
       </span>
     </div>

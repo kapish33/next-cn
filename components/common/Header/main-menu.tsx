@@ -12,9 +12,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { SunIcon } from '@radix-ui/react-icons';
+import { Locale } from '@/i18n.config';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -54,10 +54,10 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function MainNavigationMenu() {
+export function MainNavigationMenu({ lang }: { lang: Locale }) {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList>++
         <NavigationMenuItem>
           <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -84,11 +84,11 @@ export function MainNavigationMenu() {
               <ListItem href='/docs/installation' title='Installation'>
                 How to install dependencies and structure your app.
               </ListItem>
-              <Link href='/introductory-session'>
+              <Link href={`${lang}/introductory-session`}>
                 <ListItem title='Introductory Session'>
                   Discover peace and empowerment in our transformative 60-minute
                 </ListItem>
-              </Link>
+              </Link>+++
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

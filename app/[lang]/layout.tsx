@@ -43,7 +43,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Headers />
+          <Headers lang={params.lang} />
           {children}
           <Toaster position="top-center" />
         </ThemeProvider>
