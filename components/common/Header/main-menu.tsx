@@ -57,7 +57,7 @@ const components: { title: string; href: string; description: string }[] = [
 export function MainNavigationMenu({ lang }: { lang: Locale }) {
   return (
     <NavigationMenu>
-      <NavigationMenuList>++
+      <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -88,7 +88,7 @@ export function MainNavigationMenu({ lang }: { lang: Locale }) {
                 <ListItem title='Introductory Session'>
                   Discover peace and empowerment in our transformative 60-minute
                 </ListItem>
-              </Link>+++
+              </Link>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
