@@ -32,7 +32,7 @@ import { CITY } from '@/lib/city';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import crudOperations from '@/firebase/RealTime-Database/crud';
 
-export function ProfileForm({ formData }: ProfileFormProps) {
+export function ProfileForm({ formData, params }: ProfileFormProps) {
   const form = useForm<userFormInterface>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,18 +44,24 @@ export function ProfileForm({ formData }: ProfileFormProps) {
   async function onSubmit(values: userFormInterface) {
     console.log(values);
     try {
-  
       // Call the `crudOperations` function to create a new document
-      await crudOperations("POST", "user", values);
-  
+      await crudOperations('POST', 'user', { ...values, lang: params });
+
       // Show a success message to the user
-      toast('Event has been created', {
-        description: 'Sunday, December 03, 2023 at 9:00 AM',
-        action: {
-          label: 'Undo',
-          onClick: () => console.log('Undo'),
-        },
+      toast('We Had Sucessfully Recived Your Response', {
+        description: 'Join The WhatsApp Community For Get updated',
+        // action: {
+        //   label: 'Undo',
+        //   onClick: () => console.log('Undo'),
+        // },
       });
+
+      setTimeout(() => {
+        window.open(
+          'https://chat.whatsapp.com/CS7xHxqryZMICQPha0t986',
+          '_blank'
+        );
+      }, 1500);
     } catch (error) {
       // Handle any errors that occur during the CRUD operation
       console.error('Error creating event:', error);
@@ -188,7 +194,7 @@ export function ProfileForm({ formData }: ProfileFormProps) {
           )}
         />
 
-<FormField
+        <FormField
           control={form.control}
           name={formData.volunteer.fieldName}
           render={({ field }) => (

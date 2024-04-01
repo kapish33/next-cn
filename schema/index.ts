@@ -1,3 +1,4 @@
+import { Locale } from '@/i18n.config';
 import { CITY } from '@/lib/city';
 import { z } from 'zod';
 
@@ -59,4 +60,5 @@ export type ProfileFormProps = {
       filedDescription: string;
     };
   };
+  params: { lang: Locale }
 };
