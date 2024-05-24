@@ -58,7 +58,7 @@ export function ProfileForm({ formData, params }: ProfileFormProps) {
 
       setTimeout(() => {
         window.open(
-          'https://chat.whatsapp.com/CS7xHxqryZMICQPha0t986',
+          'https://chat.whatsapp.com/FN0blhXJI0uIEtxHb7t58p',
           '_blank'
         );
       }, 1500);
